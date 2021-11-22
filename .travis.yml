@@ -6,6 +6,7 @@ node_js:
   - 12
 before_script:
   - psql -c 'create database taxi_trips;' -U postgres
-  - psql -U postgres -d taxi_trips -a -f reg-database.sql
+  - psql -U postgres -d taxi_trips -a -f data.sql
+  - psql -U postgres -d taxi_trips -a -f tables.sql
 services:
   - postgresql;
